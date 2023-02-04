@@ -1,55 +1,7 @@
-def translating_to_morse(text):
-    code = {
-        " ": "| ",
-        "A": ".- ",
-        "B": "-... ",
-        "C": "-.-. ",
-        "D": "-.. ",
-        "E": ". ",
-        "F": "..-. ",
-        "G": "--. ",
-        "H": ".... ",
-        "I": ".. ",
-        "J": ".--- ",
-        "K": "-.- ",
-        "L": ".-.. ",
-        "M": "-- ",
-        "N": "-. ",
-        "O": "--- ",
-        "P": ".--. ",
-        "Q": "--.- ",
-        "R": ".-. ",
-        "S": "... ",
-        "T": "- ",
-        "U": "..- ",
-        "V": "...- ",
-        "W": ".-- ",
-        "X": "-..- ",
-        "Y": "-.-- ",
-        "Z": "--.. ",
-        "1": ".---- ",
-        "2": "..--- ",
-        "3": "...-- ",
-        "4": "....- ",
-        "5": "..... ",
-        "6": "-.... ",
-        "7": "--... ",
-        "8": "---.. ",
-        "9": "----. ",
-        "0": "----- ",
-        ".": ".-.-.- ",
-        ",": "--..-- ",
-        "?": "..--.. ",
-    }
+from user_entry import UserEntry
+from entry_processor import EntryProcessor
 
-    morse_code = ""
-
-    for x in text:
-        morse_code += code[x.upper()]
-
-    return morse_code
-
-
-text = input("Ingrese texto a traducir a codigo morse: ")
-
-print(translating_to_morse(text))
+if __name__ == "__main__":
+    entry = UserEntry()
+    processor = EntryProcessor()
+    processor.entry_processing(entry.get_entry())
