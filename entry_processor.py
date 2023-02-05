@@ -10,10 +10,10 @@ class EntryProcessor:
 
         for x in phrase_to_translate.upper():
             if x == " ":
-                time.sleep(0.5)
+                time.sleep(2)
                 continue
             if x == "| ":
-                time.sleep(1)
+                time.sleep(3)
                 continue
             translating_morse = my_dictionary.getMorse(x)
             print(x + str(translating_morse))
