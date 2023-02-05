@@ -16,7 +16,7 @@ class EntryProcessor:
                 time.sleep(1)
                 continue
             translating_morse = my_dictionary.getMorse(x)
-            print(x, +str(translating_morse))
+            print(x + str(translating_morse))
 
             for j in translating_morse:
                 if j == ".":
